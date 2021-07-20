@@ -1,0 +1,165 @@
+/*Root*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+/*Configuração do Body*/
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(243, 243, 243);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+/*Configuração do Insta Wrapper*/
+.insta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 60%;
+  height: 100vh;
+}
+/*Ajustes do IMG do Phone*/
+.insta-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+/*Deixando o IMG do Phone Menor*/
+.insta-phone img {
+  height: 50rem;
+}
+
+.insta-valida {
+  display: flex;
+  /*Desta forma está na Horizontal*/
+  align-items: center;
+  /*Desta forma está na vertical*/
+  justify-content: space-around;
+  /*Alterou o eixo para coluna*/
+  flex-direction: column;
+  width: 50%;
+  min-height: 34rem;
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  padding: 1.3rem 0;
+  /*Bordas em Caixas*/
+  border: 1px solid lightgray;
+}
+
+/*nth-child() faz com que escolhecemos cada "bloco" da nossa tela*/
+.group:nth-child(1) {
+  min-height: 19rem;
+}
+/*Alinhamento da IMG Logo Insta*/
+.insta-logo {
+  height: 3rem;
+}
+/*Realizando alinhamento dos conteudos de Profile*/
+.insta-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /*Para a IMG não exceder os limites*/
+  overflow: hidden;
+}
+
+.insta-profile img {
+  height: 6rem;
+}
+
+.insta-login {
+  background-color: #0095f6;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.insta-logout {
+  color: #0095f6;
+  margin-top: 1rem;
+}
+
+.not-account {
+  color: rgb(160, 160, 160);
+}
+
+.link-blue {
+  color: #0095f6;
+}
+
+.get-theapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.3rem 0;
+}
+
+.download {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+}
+
+.app-download {
+  height: 3rem;
+  width: 10rem;
+  background-size: cover;
+}
+
+/*Inserindo os ICON via CSS*/
+.app-download:nth-child(1) {
+  background-image: url(./img/icon_appstore.png);
+}
+
+.app-download:nth-child(2) {
+  background-image: url(./img/icon_googleplay.png);
+}
+
+/*RESPONSIVO*/
+/*MEDIA QUERIES*/
+/*Quando a tela tiver mais que 1024px*/
+@media (max-width: 1024px) {
+  .insta-wrapper {
+    width: 90%;
+  }
+}
+/*Quando a tela tiver mais que 658px*/
+@media (max-width: 658px) {
+  body {
+    background-color: white;
+  }
+  .insta-wrapper {
+    width: 90%;
+  }
+  .insta-phone {
+    display: none;
+  }
+
+  .insta-valida {
+    width: 100%;
+  }
+
+  .group {
+    border: 1px solid transparent;
+  }
+}
