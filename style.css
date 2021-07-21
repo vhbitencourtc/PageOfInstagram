@@ -1,0 +1,211 @@
+/*Root*/
+* {
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  /*CORREÇÃO, inserir o Font Family,Size, Justify e Align no Root*/
+}
+/*Configuração do Body*/
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(243, 243, 243), 1;
+  display: flex;
+  /*CORREÇÃO,retirei o Justify*/
+}
+/*Configuração do Insta Wrapper*/
+.wrapper {
+  display: flex;
+  width: 45%;
+  height: 100vh;
+  justify-content: start;
+  /*CORREÇÃO, alteração do widht*/
+}
+/*Ajustes do IMG do Phone*/
+.iconphone {
+  display: flex;
+  width: 50%;
+  /*CORREÇÃO,retirado o  Justify e Align*/
+}
+/*Deixando o IMG do Phone Menor*/
+.iconphone img {
+  height: 60rem;
+  /*CORREÇÃO, alteração do tamanho do IMG do Phone*/
+}
+
+.valida {
+  display: flex;
+  /*Desta forma está na vertical*/
+  justify-content: space-around;
+  /*Alterou o eixo para coluna*/
+  flex-direction: column;
+  width: 50%;
+  min-height: 33rem;
+  /*CORREÇÃO, alteração do WIDTH, Min-Height e retirada do Align*/
+}
+
+.group1 {
+  display: flex;
+  justify-content: space-between;
+  /*CORREÇÃO, retirado o Align*/
+  flex-direction: column;
+  background-color: rgba(255, 255, 255), 1;
+  /*Controla o Tamanho das DIVs*/
+  width: 90%;
+  /*Bordas em Caixas*/
+  border: 1px 1px solid lightgray;
+  box-shadow: rgb(160, 160, 160) 0px 0px 2px 0px;
+  /*CORREÇÃO, alteração da WIDTH, BORDER e inclusão do BOX Shadow*/
+}
+.group2 {
+  display: flex;
+  justify-content: center;
+  /*CORREÇÃO, retirado o Align*/
+  flex-direction: column;
+  background-color: rgba(255, 255, 255), 1;
+  /*Controla o Tamanho das DIVs*/
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  /*Bordas em Caixas*/
+  border: 1px 1px solid lightgray;
+  box-shadow: rgb(160, 160, 160) 0px 0px 2px 0px;
+  /*CORREÇÃO, alteração da WIDTH, BORDER, justify e inclusão do BOX Shadow, padding e margin*/
+}
+
+/*nth-child() faz com que escolhecemos cada "bloco" da nossa tela*/
+.group1:nth-child(1) {
+  min-height: 20rem;
+  /*CORREÇÃO, alteração do min-height*/
+}
+/*nth-child() faz com que escolhecemos cada "bloco" da nossa tela*/
+.group2:nth-child(2) {
+  min-height: 2rem;
+  /*CORREÇÃO, alteração do min-height*/
+}
+
+/*Alinhamento da IMG Logo Insta*/
+.iconlogo {
+  height: 6rem;
+  padding: 10px;
+  margin: 5px;
+  /*CORREÇÃO, alteração ddo height e inserir padding e margin para alinhar a logo*/
+}
+/*Realizando alinhamento dos conteudos de Profile*/
+.iconprofile {
+  display: flex;
+  border-radius: 50%;
+  margin: 4px;
+  /*Para a IMG não exceder os limites*/
+  overflow: hidden;
+  /*CORREÇÃO, alteração do radius, margin e retirado o Align e Justify*/
+}
+
+.iconprofile img {
+  height: 6.5rem;
+  /*CORREÇÃO, height 6.5rem*/
+}
+
+.login {
+  background-color: #0095f6;
+  color: white;
+  padding: 7.5px;
+  margin: 3px;
+  border-radius: 4.5px;
+  font-weight: 500;
+  /*CORREÇÃO, font, wei, padding e radius*/
+}
+
+.logout {
+  color: #0095f6;
+  padding: 10px;
+  margin: 10px;
+  font-weight: 500;
+  font-size: 17px;
+  /*CORREÇÃO, margin-top e inserir o padding,font-wei, font-size e margin*/
+}
+
+.not-account {
+  color: solid rgb(160, 160, 160);
+  font-weight: 500;
+}
+
+.link-blue {
+  color: #0095f6;
+  font-weight: 500;
+}
+
+.get-theapp {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.3rem 0;
+  /*CORREÇÃO, retirado o Align e Justify*/
+}
+
+.getapp {
+  font-weight: 350;
+  font-size: 18px;
+  margin: 2px;
+  /*CORREÇÃO, todo contéudo alterado*/
+}
+
+.download {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 1rem;
+  /*CORREÇÃO, retirado o Align*/
+}
+
+.app-download {
+  height: 3rem;
+  width: 10rem;
+  background-size: cover;
+  /*CORREÇÃO, correção dos ICONs*/
+}
+
+/*Inserindo os ICON via CSS*/
+.app-download:nth-child(1) {
+  background-image: url(./img/icon_appstore.png);
+}
+
+.app-download:nth-child(2) {
+  background-image: url(./img/icon_googleplay.png);
+}
+
+/*RESPONSIVO*/
+/*MEDIA QUERIES*/
+/*Quando a tela tiver mais que 1024px*/
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 90%;
+  }  
+}
+
+/*Quando a tela tiver mais que 658px*/
+@media (max-width: 656px) {
+  body {
+    background-color: white;
+  }
+  .wrapper {
+    width: 90%;
+  }
+  .iconphone {
+    display: none;
+  }
+
+  .valida {
+    width: 100%;
+  }
+
+  .group {
+    border: 1px solid transparent;
+  }
+}
