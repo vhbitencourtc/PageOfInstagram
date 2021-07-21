@@ -10,6 +10,9 @@ O projeto foi desenvolvido com as linguagens:
 Utilitários
 - [Bing Imagens](https://www.bing.com/?scope=images&nr=1&FORM=NOFORM)
 
+##### :mag:OBS: Aplicado responsivo para telas de 1024px e 658px.
+
+
 ## :computer:Projeto
 O projeto aplicado atráves de um dos desafios do Bootcamp HTML WEB Developer, cujo objetivo é desenvolver a página inicial do Instagram.
 > Com mentoria da `Gabriela (SpruceGabriela)`
